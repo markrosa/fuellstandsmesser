@@ -79,13 +79,13 @@ def show_level(level):
 # diese Funktion wird alle LEDs im Notifikationsbereich 10x rot (langsam) blinken lassen
 def low_level_notification():
     if DEBUG: print("   Zeige 'low level notification'.") # DEBUG
-    for i in range(0,10):
+    for i in range(0,5):
         pixels.set_pixel_line(notification_start_pixel, notification_end_pixel, red)
         pixels.show()
-        time.sleep(0.3)
+        time.sleep(0.2)
         pixels.set_pixel_line(notification_start_pixel, notification_end_pixel, black)
         pixels.show()
-        time.sleep(0.7)
+        time.sleep(0.3)
 
 # diese Funktion wird alle LEDs im Notifikationsbereich 5x grün (schnell) blinken lassen
 def top_up_notification():
